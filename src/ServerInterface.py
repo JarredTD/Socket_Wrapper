@@ -1,7 +1,7 @@
 '''
 Import Socket interface that the Server class is a child of
 '''
-from socket_interface.SocketInterface import SocketInterface
+from SocketInterface import SocketInterface
 
 ##############################
 '''
