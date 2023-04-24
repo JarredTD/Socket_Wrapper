@@ -9,6 +9,7 @@ Both the server and client have error checking, which throw errors in the case o
 - [Installation](#installation)
 - [Usage](#usage)
 - [Technologies](#technologies)
+- [TODO](#todo)
 
 ## Installation
 
@@ -33,6 +34,9 @@ SockerWrapper was developed using the following technologies:
 - Python
 - socket library
 - os library
+
+## TODO
+- 
 
 ## License
 
