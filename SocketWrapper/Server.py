@@ -1,15 +1,15 @@
 '''
-Import Server interface that the Server class is a child of
+Import Server interface that the Server class is a child of Server Interface
 '''
 
 from interfaces.ServerInterface import ServerInterface
 
 ##############################
-'''
-Server class, child of Server interface. Used as a container for the collection of the server information and automatically
-using that information.
-'''
 class Server(ServerInterface):
+    '''
+    Server class, child of Server interface. Used as a container for the collection of the server information and automatically
+    using that information.
+    '''
     def __init__(self, ip: str, port: str) -> None:
         super().__init__()
         self.ip = ip
@@ -17,17 +17,17 @@ class Server(ServerInterface):
 
         self._parse_file()
 
-    '''
-    Runs as part of the initialization. Converts the port to a int. and then binds the socket.
-    '''
     def _parse_file(self) -> None:
+        '''
+        Runs as part of the initialization. Converts the port to a int. and then binds the socket.
+        '''
         if ((self._convert_port() == False) or (self._bind_socket() == False)):
             raise StopIteration
     
-    '''
-    Takes a msg and checks if it meets a requirement. If it does, false is returned.
-    '''
     def check_end_condition(self, msg:str):
+        '''
+        Takes a msg and checks if it meets a requirement. If it does, false is returned.
+        '''
         if (msg == "exit"):
             self.send_msg(msg)
             self.connectionSocket.close()
