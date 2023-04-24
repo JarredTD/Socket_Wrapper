@@ -1,3 +1,7 @@
 pyproject.toml
 dist/
 .DS_Store
+venv/
+SocketWrapper.egg-info
+setup.py
+setup.cfg
