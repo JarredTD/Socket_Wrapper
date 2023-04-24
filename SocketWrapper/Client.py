@@ -1,5 +1,5 @@
 '''
-Import the ClientInterface that the Client class is a child of 
+Import the ClientInterface that the Client class is a child of the Client Interface
 '''
 
 from interfaces.ClientInterface import ClientInterface
