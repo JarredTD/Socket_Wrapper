@@ -36,7 +36,10 @@ SockerWrapper was developed using the following technologies:
 - os library
 
 ## TODO
-- 
+- Create custom exceptions
+- Create default constructors (optional \__init__ parameters)
+- Create tests
+- Add more functionality
 
 ## License
 
