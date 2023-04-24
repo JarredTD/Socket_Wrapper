@@ -2,7 +2,7 @@
 Import Server interface that the Server class is a child of
 '''
 
-from ServerInterface import ServerInterface
+from interfaces.ServerInterface import ServerInterface
 
 ##############################
 '''

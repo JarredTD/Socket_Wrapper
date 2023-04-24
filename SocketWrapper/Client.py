@@ -2,7 +2,7 @@
 Import the ClientInterface that the Client class is a child of
 '''
 
-from ClientInterface import ClientInterface
+from interfaces.ClientInterface import ClientInterface
 
 ##############################
 
