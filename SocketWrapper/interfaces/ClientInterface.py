@@ -21,8 +21,7 @@ class ClientInterface(SocketInterface):
         try:
             self.connect((self.ip, self.port_num))
         except OSError as e:
-            print(f"Error {e.errno}: {e.strerror}")
-            return False
+            raise e
 
         self.input_state = True
         return True
