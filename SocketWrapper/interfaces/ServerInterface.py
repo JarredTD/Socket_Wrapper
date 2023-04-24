@@ -22,12 +22,12 @@ class ServerInterface(SocketInterface):
         try:
             super().bind((self.ip, self.port_num))
         except OSError as e:
-            print(f"Error {e.errno}: {e.strerror}")
-            return False
+            raise(e)
 
         self.input_state = True
         return True
     
+    #TODO Find a better way to make this connection happen, should make an "accept" method?
     def connect_to_client(self, connectionSocket):
         '''
         connection socket is tracked by the class through this method.
