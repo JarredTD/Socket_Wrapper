@@ -11,7 +11,7 @@ class Client(ClientInterface):
     Client class, child of ClientInterface. Used as a container for the collection of the client information and automatically
     using that information.
     '''
-    def __init__(self, ip: str, port: str) -> None:
+    def __init__(self, ip: str = '', port: str = '') -> None:
         super().__init__()
         self.ip = ip
         self.port_num = port
