@@ -5,3 +5,4 @@ venv/
 SocketWrapper.egg-info
 setup.py
 setup.cfg
+build/
