@@ -10,7 +10,7 @@ class Server(ServerInterface):
     Server class, child of Server interface. Used as a container for the collection of the server information and automatically
     using that information.
     '''
-    def __init__(self, ip: str, port: str) -> None:
+    def __init__(self, ip: str = '', port: str = '') -> None:
         super().__init__()
         self.ip = ip
         self.port_num = port
