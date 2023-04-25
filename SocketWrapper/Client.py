@@ -10,6 +10,9 @@ class Client(ClientInterface):
     '''
     Client class, child of ClientInterface. Used as a container for the collection of the client information and automatically
     using that information.
+
+    Constructing this with no arguments will default both to '', which whill cause the ip to point to the loopback, and the 
+    port to default to 12000.
     '''
     def __init__(self, ip: str = '', port: str = '') -> None:
         super().__init__()
