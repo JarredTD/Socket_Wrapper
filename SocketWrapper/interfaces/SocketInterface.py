@@ -29,6 +29,7 @@ class SocketInterface(socket):
         else: 
             try: 
                 self.port_num = int(self.port_num)
+                
             except ValueError as e:
                 raise(e)
             
@@ -66,6 +67,6 @@ class SocketInterface(socket):
 
             response_packet = msg_len_bytes + msg
             self.connectionSocket.sendall(response_packet)
-            
+
         except OSError as e:
             raise(e)

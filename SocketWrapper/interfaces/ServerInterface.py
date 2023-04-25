@@ -21,6 +21,7 @@ class ServerInterface(SocketInterface):
         '''
         try:
             super().bind((self.ip, self.port_num))
+            
         except OSError as e:
             raise(e)
 

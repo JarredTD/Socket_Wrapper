@@ -20,6 +20,7 @@ class ClientInterface(SocketInterface):
         '''
         try:
             self.connect((self.ip, self.port_num))
+            
         except OSError as e:
             raise e
 
