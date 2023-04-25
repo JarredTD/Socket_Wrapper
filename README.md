@@ -40,6 +40,7 @@ SockerWrapper was developed using the following technologies:
 - Create default constructors (optional \__init__ parameters)
 - Create tests
 - Add more functionality
+- Add more detail to the methods and classes of input and output
 
 ## License
 
