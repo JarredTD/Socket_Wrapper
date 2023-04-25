@@ -29,8 +29,8 @@ class ServerInterface(SocketInterface):
         return True
     
     #TODO Find a better way to make this connection happen, should make an "accept" method?
-    def connect_to_client(self, connectionSocket):
+    def connect_to_client(self) -> None:
         '''
-        connection socket is tracked by the class through this method.
+        Accepts a connection, saving the connection socket. Address returned from accept() is ignored.
         '''
-        self.connectionSocket = connectionSocket
+        self.connectionSocket, _ = self.accept()
