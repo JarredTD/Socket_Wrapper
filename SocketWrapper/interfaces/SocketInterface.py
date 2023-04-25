@@ -49,7 +49,7 @@ class SocketInterface(socket):
                 remaining = msg_len - len(msg)
                 msg += self.connectionSocket.recv(remaining)
         except OSError as e:
-            raise StopIteration
+            raise(e)
 
         return msg.decode()
     
@@ -65,5 +65,5 @@ class SocketInterface(socket):
 
             response_packet = msg_len_bytes + msg
             self.connectionSocket.sendall(response_packet)
-        except OSError:
-            raise StopIteration
+        except OSError as e:
+            raise(e)
