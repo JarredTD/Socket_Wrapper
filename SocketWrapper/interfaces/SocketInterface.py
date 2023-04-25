@@ -48,6 +48,7 @@ class SocketInterface(socket):
             while (len(msg) < msg_len):
                 remaining = msg_len - len(msg)
                 msg += self.connectionSocket.recv(remaining)
+
         except OSError as e:
             raise(e)
 
@@ -65,5 +66,6 @@ class SocketInterface(socket):
 
             response_packet = msg_len_bytes + msg
             self.connectionSocket.sendall(response_packet)
+            
         except OSError as e:
             raise(e)
