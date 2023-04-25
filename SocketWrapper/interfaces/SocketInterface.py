@@ -22,12 +22,15 @@ class SocketInterface(socket):
         ''' 
         if (self.port_num == ''): 
             self.port_num = 12000
+
+        elif (isinstance(self.port_num), int):
+            return True
+        
         else: 
             try: 
                 self.port_num = int(self.port_num)
             except ValueError as e:
-                print(e.with_traceback())
-                return False
+                raise(e)
             
             return True
         
